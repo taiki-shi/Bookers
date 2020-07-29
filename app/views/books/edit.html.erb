@@ -9,5 +9,5 @@
 
 <% end %>
 <!-- 「Show」詳細ページと「Back」一覧ページへのリンク追加 -->
-<%= link_to "Show", show_book_path(@book.id) %>
+<%= link_to "Show", book_path(@book.id) %>
 <%= link_to "Back", books_path %>

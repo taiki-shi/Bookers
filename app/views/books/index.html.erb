@@ -14,10 +14,9 @@
 	  <tr>
 		<td><%= book.title %></td>
 		<td><%= book.body %></td>
-		<!-- 以下3行 未完成 -->
-		<td><%= link_to 'Show', book_path(book.id) %></td>
-		<td><%= link_to "Edit", edit_book_path(@book) %></td>
-		<td><%= link_to 'Destroy', destroy_book_path(@book), method: :delete "deta-confirm" => "Are you sure? " %></td>
+		<td><%= link_to 'Show', book_path(book) %></td>
+		<td><%= link_to "Edit", edit_book_path(book) %></td>
+		<td><%= link_to 'Destroy', book_path(book), method: :delete, data: {confirm: "Are you sure? " } %></td>
 	  </tr>
 	<% end %>
   </tbody>

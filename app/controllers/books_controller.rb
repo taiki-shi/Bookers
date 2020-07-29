@@ -14,7 +14,7 @@ class BooksController < ApplicationController
   def create
   	book = Book.new(book_params)
   	book.save
-  	redirect_to book_path(book)
+  	redirect_to book_path(book), notice: 'Book was successfully created.'
   end
 
   def edit
@@ -24,7 +24,7 @@ class BooksController < ApplicationController
   def update
   	book = Book.find(params[:id])
   	bool.update(book_params)
-  	redirect_to book_path(book)
+  	redirect_to book_path(book), notice: 'Book was successfully created.'
   end
 
   def destroy
